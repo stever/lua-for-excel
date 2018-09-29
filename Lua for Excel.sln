@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lua for Excel", "src\Lua for Excel\Lua for Excel.csproj", "{F802AD35-D1AD-425E-82EF-51009934452B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7AE8AB98-0B54-4DD6-B6B3-758775A933A1} = {7AE8AB98-0B54-4DD6-B6B3-758775A933A1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lua Loader", "src\Lua Loader\Lua Loader.csproj", "{7AE8AB98-0B54-4DD6-B6B3-758775A933A1}"
 EndProject

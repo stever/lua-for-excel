@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
 using ExcelDna.Integration;
+using log4net;
 
 namespace LuaForExcel
 {
     public partial class LuaEditor : Form
     {
+        private static readonly ILog Log = LogManager.
+            GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
         private const string MainScriptName = "Main";
 
         private static readonly NetOffice.ExcelApi.Application Excel
@@ -31,7 +36,8 @@ namespace LuaForExcel
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Exception",
+                Log.Error("EXCEPTION", ex);
+                MessageBox.Show(ex.Message, "LuaEditor_Load Exception",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -46,9 +52,20 @@ namespace LuaForExcel
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Exception",
+                Log.Error("EXCEPTION", ex);
+                MessageBox.Show(ex.Message, "TextChanged Exception",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void LuaEditor_Deactivate(object sender, EventArgs e)
+        {
+            AddIn.ReloadLuaLoaderAddIn();
+        }
+
+        private void LuaEditor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            AddIn.ReloadLuaLoaderAddIn();
         }
 
         private static string GetLuaScript(string name)
