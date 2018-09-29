@@ -1,7 +1,7 @@
 <DnaLibrary Name="Lua for Excel Add-In" RuntimeVersion="v4.0" Language="CS">
-  <ExternalLibrary Path="LuaForExcel.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" />
-  <Reference Path="LuaForExcel.dll" ExplicitExports="false" Pack="true" />
-  <Reference Path="System.Windows.Forms.dll" ExplicitExports="false" Pack="true" />
+  <ExternalLibrary Path="LuaForExcel.dll" ExplicitExports="true" LoadFromBytes="true" Pack="true" />
+  <Reference Path="LuaForExcel.dll" ExplicitExports="true" Pack="true" />
+  <Reference Path="System.Windows.Forms.dll" ExplicitExports="true" Pack="true" />
 
   <!--
        The RuntimeVersion attribute above allows two settings:
