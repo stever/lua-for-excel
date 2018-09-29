@@ -7,7 +7,7 @@ the Excel file as an XML Part. This script is parsed for Lua functions,
 which are then registered as functions using Excel-DNA.
 
 There is no API provided currently to the Lua scripts, but there is
-potential there. The Lua sandbox is set currently restricted to modules
+potential there. The Lua sandbox is currently restricted to modules
 defined by the MoonSharp Preset_HardSandbox setting.
 
 See // http://www.moonsharp.org/sandbox.html for more info.
