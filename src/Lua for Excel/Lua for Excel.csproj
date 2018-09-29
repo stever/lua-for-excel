@@ -98,6 +98,8 @@
   </Target>
   <PropertyGroup>
     <PostBuildEvent>COPY /Y "..\..\..\Lua Loader\$(OutDir)\Lua Loader-AddIn.*" .
-COPY /Y "..\..\..\Lua Loader\$(OutDir)\LuaForExcel.LuaLoader.*" .</PostBuildEvent>
+COPY /Y "..\..\..\Lua Loader\$(OutDir)\LuaForExcel.LuaLoader.*" .
+COPY /Y "..\..\..\Lua Loader\$(OutDir)\Antlr4.Runtime.Standard.dll" .
+COPY /Y "..\..\..\Lua Loader\$(OutDir)\MoonSharp.Interpreter.dll" .</PostBuildEvent>
   </PropertyGroup>
 </Project>
