@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>3021</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -73,7 +74,6 @@
   <ItemGroup>
     <Compile Include="AddIn.cs" />
     <Compile Include="LuaFunctionDefinition.cs" />
-    <Compile Include="LuaFunctions.cs" />
     <Compile Include="LuaFunctionsVisitor.cs" />
     <Compile Include="Parser\LuaBaseVisitor.cs" />
     <Compile Include="Parser\LuaLexer.cs" />

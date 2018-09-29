@@ -5,8 +5,10 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
+using Antlr4.Runtime;
 using ExcelDna.Integration;
 using log4net;
+using LuaForExcel.LuaLoader.Parser;
 using MoonSharp.Interpreter;
 
 namespace LuaForExcel.LuaLoader
@@ -55,7 +57,7 @@ namespace LuaForExcel.LuaLoader
 
                     script.DoString(luaScript);
 
-                    foreach (var def in LuaFunctions.GetFunctionDefinitions(luaScript))
+                    foreach (var def in GetFunctionDefinitions(luaScript))
                     {
                         if (Scripts.ContainsKey(def.Name))
                         {
@@ -122,6 +124,18 @@ namespace LuaForExcel.LuaLoader
         public void AutoClose()
         {
 
+        }
+
+        private static IEnumerable<LuaFunctionDefinition> GetFunctionDefinitions(string luaScript)
+        {
+            var inputStream = new AntlrInputStream(luaScript);
+            var lexer = new LuaLexer(inputStream);
+            var tokens = new CommonTokenStream(lexer);
+            var parser = new LuaParser(tokens);
+
+            var visitor = new LuaFunctionsVisitor();
+            visitor.VisitChunk(parser.chunk());
+            return visitor.FunctionDefinitions;
         }
 
         private static Dictionary<string, string> GetLuaScripts()
