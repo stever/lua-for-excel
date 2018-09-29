@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lua for Excel", "src\Lua for Excel\Lua for Excel.csproj", "{F802AD35-D1AD-425E-82EF-51009934452B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lua Loader", "src\Lua Loader\Lua Loader.csproj", "{7AE8AB98-0B54-4DD6-B6B3-758775A933A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F802AD35-D1AD-425E-82EF-51009934452B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F802AD35-D1AD-425E-82EF-51009934452B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F802AD35-D1AD-425E-82EF-51009934452B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F802AD35-D1AD-425E-82EF-51009934452B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE8AB98-0B54-4DD6-B6B3-758775A933A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE8AB98-0B54-4DD6-B6B3-758775A933A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE8AB98-0B54-4DD6-B6B3-758775A933A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE8AB98-0B54-4DD6-B6B3-758775A933A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CFAD421-5B23-4440-AA0D-76D20AC5A210}
+	EndGlobalSection
+EndGlobal
